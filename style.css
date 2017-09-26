@@ -1,0 +1,152 @@
+*{
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+ul{
+	padding: 0px;
+	margin: 0px;
+	display: block;
+	background-color: #000;
+	width: 100%;
+	position: fixed;
+	top:0;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+
+ul li{
+	float: left;
+	padding: 5px 40px;
+	list-style-type: none;
+
+}
+i{
+	padding-right: 10px;
+}
+
+.flipbox{
+	width: 330px;
+	height: 400px;
+	margin: 50px;
+	border-radius: 10px;
+	text-align: left;
+	float: left;
+}
+ol li{
+	padding: 10px;
+	list-style-type: none;
+}
+.flipbox > .front{
+	position: absolute;
+	width: 330px;
+	height: 400px;
+	border-radius: 10px;
+	backface-visibility: hidden;
+	transform: perspective(1000px) rotateY(0deg);
+	background-color: white;
+	transition: transform .5s linear 0s;
+	z-index: -1;
+
+}
+.flipbox > .back{
+	color:#000;
+	width: 330px;
+	height: 400px;
+	position: absolute;
+	backface-visibility: hidden;
+	border-radius: 10px;
+	transform: perspective(1000px) rotateY(180deg);
+	background-color: #5EDA9E;
+	transition: transform .5s linear 0s;
+	z-index: -1;
+
+}
+.flipbox:hover > .front{
+	transform: perspective(1000px) rotateY(-180deg);
+}
+
+.flipbox:hover > .back{
+	transform: perspective(1000px) rotateY(0deg);
+}
+.textcenter{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+ .footer .listitem{
+	display: inline;
+	
+}
+
+.listitem{
+	position: relative;
+	display: inline-block;
+}
+
+.tooltiptext{
+	position: absolute;
+	visibility: hidden;
+	background-color: #000;
+	width: 200px;
+	height: 50px;
+	float: left;
+	bottom: 130%;
+    left: 50%;
+    color: white;
+    padding: 3px 3px 10px 3px;
+    text-align: center;
+    margin-left: -100px;
+    border-radius: 10px;
+
+}
+.listitem:hover .tooltiptext{
+	visibility: visible;
+}
+
+.transformeffect{
+	transition: transform .5s linear 0s;
+}
+
+.transformeffect:hover{
+	transform: scale(1.1);
+}
